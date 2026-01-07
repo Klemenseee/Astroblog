@@ -226,4 +226,21 @@ footer {
     padding: 10px;
     color: #000000;
     margin-top: auto;
+
+}
+/* Media query pour tablettes et écrans plus petits (max-width: 768px) */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column; /* Liens alignés verticalement */
+        align-items: center; /* Centrage horizontal des liens */
+    }
+    
+    nav a {
+        margin: 10px 0; /* Marge verticale au lieu d'horizontale */
+    }
+    
+    #logo {
+        width: 40%; /* Logo plus grand pour une meilleure visibilité */
+    }
 }
