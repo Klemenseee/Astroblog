@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astroblog - Votre Guide Astrologique</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="image/logo-transparent2-png.png" alt="logo">
+    </header>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="Horoscopes.html">Horoscopes</a>
+        <a href="Consultations.html">Consultations</a>
+        <a href="Blog.html">Blog</a>
+    </nav>
+    
+    <section id="consultations">
+        <h2>Consultations Astrologiques</h2>
+        <p>Obtenez une consultation personnalisée sur des thèmes comme l'amour, la carrière ou la santé. Remplissez le formulaire ci-dessous (simulation : les données ne sont pas envoyées réellement).</p>
+        <div class="consultation">
+<img 
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRX-OI43i6zUvzqYZLh5k-6DhMauzi2RGxkR8iWJnS03Y4_yU2GWYkTokiea2pWQ5Ijjw2JS6lqPQhbENJGC0GyvzE7tqM2M9SEp4nRdk&s=10"
+  alt="Carte astrologique"
+  style="width: 25%; border-radius: 20px; margin: 0 auto 20px auto; display: block;"
+>
+
+            <form id="consultation-form">
+                <label for="nom">Votre Nom :</label>
+                <input type="text" id="nom" required>
+                
+                <label for="email">Votre Email :</label>
+                <input type="email" id="email" required>
+                
+                <label for="date-naissance">Date de Naissance :</label>
+                <input type="date" id="date-naissance" required>
+                
+                <label for="theme">Thème de Consultation :</label>
+                <select id="theme">
+                    <option value="amour">Amour et Relations</option>
+                    <option value="carriere">Carrière et Finances</option>
+                    <option value="sante">Santé et Bien-être</option>
+                    <option value="autre">Autre</option>
+                </select>
+                
+                <label for="message">Détails Supplémentaires :</label>
+                <textarea id="message" rows="4"></textarea>
+                
+                <button type="submit">Demander une Consultation</button>
+            </form>
+        </div>
+    </section>
+   
+    <footer>
+        <h2>Contactez-Nous</h2>
+        <p>Email : contact@astroblog.com | Téléphone : +33 1 23 45 67 89</p>
+        <p>&copy; 2026 Astroblog. Tous droits réservés. Informations à titre éducatif uniquement.</p>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

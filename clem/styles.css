@@ -1,0 +1,229 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #A282BF, #322849);
+    color: #000000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #A282BF;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #000000;
+}
+
+nav {
+    background: #9477af;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #000000;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+section {
+    padding: 20px;
+    max-width: 1600px; /* Centre automatiquement toutes les sections */
+    margin: 0 auto; /* Centre horizontalement */
+    flex: 1;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0; /* Padding vertical seulement */
+    background: url('https://cdn.pixabay.com/photo/2015/02/27/19/28/esoteric-652627_1280.jpg') no-repeat center/cover;
+    color: #ffffff;
+    width: 100%; /* Full-width pour l'image */
+    max-width: none; /* Override pour full-width */
+    margin: 0; /* Pas de marge latérale */
+}
+
+.hero h2 {
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Ombre ajoutée : décalage 2px, flou 4px, noir semi-transparent */
+}
+
+.hero p { /* Nouvelle règle pour les paragraphes dans .hero */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Même ombre que le titre pour cohérence */
+}
+
+#accueil{
+    font-size: 150%;
+}
+
+#horoscopes {
+    background: #A282BF;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#consultations {
+    background: #A282BF;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#logo {
+    width: 15%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, button, select {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #ffd700;
+    color: #000;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffed4e;
+}
+
+#blog {
+    background: #A282BF;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative; /* Pour positionner les éléments absolus à l'intérieur */
+}
+
+#blog.expanded {
+    /* Quand un article est agrandi, on peut ajuster si nécessaire, mais pas obligatoire */
+}
+
+#contact {
+    background: #A282BF;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.zodiac-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.zodiac-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+.blog-article {
+    display: flex;
+    margin: 20px 0;
+    background: #A282BF;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer; /* Indique que c'est cliquable */
+    transition: all 0.3s ease; /* Animation douce */
+    position: relative; /* Pour le bouton Fermer */
+}
+
+.blog-article img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.blog-article.expanded {
+    position: absolute; /* Position absolue par rapport à #blog */
+    top: 20px; /* Respecte le padding de #blog */
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    width: auto; /* Prend toute la largeur disponible */
+    height: auto; /* Prend toute la hauteur disponible */
+    z-index: 10; /* Au-dessus des autres éléments dans la section */
+    background-color: rgb(138, 91, 192); /* Fond blanc pour contraste */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto; /* Scroll si nécessaire */
+    display: block; /* Change de flex à block pour un meilleur affichage */
+    color: #000; /* Texte noir pour contraste */
+}
+
+.blog-article.expanded img {
+    width: 200px; /* Agrandit l'image en mode agrandi */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ffffff;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.blog-article.expanded .close-btn {
+    display: block; /* Visible seulement en mode agrandi */
+}
+
+/* Masque les autres articles quand un est agrandi */
+#blog.expanded .blog-article:not(.expanded) {
+    display: none;
+}
+
+/* Nouveau : Cache le contenu complet en mode normal */
+.full-content {
+    display: none;
+}
+
+/* Affiche le contenu complet seulement en mode agrandi */
+.blog-article.expanded .full-content {
+    display: block;
+    margin-top: 20px;
+}
+
+footer {
+    background: #A282BF;
+    text-align: center;
+    padding: 10px;
+    color: #000000;
+    margin-top: auto;
+}
