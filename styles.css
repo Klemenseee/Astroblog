@@ -3,14 +3,14 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #A282BF, #322849);
-    color: #000000;
+    color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 header {
-    background: #A282BF;
+    background: #c7a1eb;
     padding: 20px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -22,6 +22,10 @@ header h1 {
     color: #000000;
 }
 
+#titre{
+    color: #562564;
+}
+
 nav {
     background: #9477af;
     padding: 10px;
@@ -29,14 +33,14 @@ nav {
 }
 
 nav a {
-    color: #000000;
+    color: #ffffff;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #fff;
+    color: #791c8b;
 }
 
 section {
@@ -113,7 +117,7 @@ button:hover {
 }
 
 #blog {
-    background: #A282BF;
+    background: #c7a1eb;
     padding: 20px;
     border-radius: 10px;
     margin-top: 10px;
@@ -173,12 +177,12 @@ button:hover {
     width: auto; /* Prend toute la largeur disponible */
     height: auto; /* Prend toute la hauteur disponible */
     z-index: 10; /* Au-dessus des autres éléments dans la section */
-    background-color: rgb(138, 91, 192); /* Fond blanc pour contraste */
+    background-color: #A282BF; /* Fond blanc pour contraste */
     padding: 20px;
     box-sizing: border-box;
     overflow: auto; /* Scroll si nécessaire */
     display: block; /* Change de flex à block pour un meilleur affichage */
-    color: #000; /* Texte noir pour contraste */
+    color: #ffffff; /* Texte noir pour contraste */
 }
 
 .blog-article.expanded img {
@@ -226,8 +230,8 @@ footer {
     padding: 10px;
     color: #000000;
     margin-top: auto;
-
 }
+
 /* Media query pour tablettes et écrans plus petits (max-width: 768px) */
 @media (max-width: 768px) {
     nav {
